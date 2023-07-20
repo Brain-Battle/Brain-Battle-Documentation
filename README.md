@@ -5,7 +5,7 @@
 **Goal**:  
 to display streaming from two gopro on a screen  
 **Method**:  
-Host two RTMP servers locally using two instance of MonaServer2, stream GoPro to each server using GoPro Quik app and then receive the streamings using FFmpeg.
+Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPro to each server using **GoPro Quik** app and then receive the streamings using **FFmpeg**.
 ### Requirements
 - [MonaServer2](https://github.com/MonaSolutions/MonaServer2) for hosting RTMP server
 - [FFmpeg](https://ffmpeg.org/) to receive GoPro streaming with low delay
