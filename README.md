@@ -56,10 +56,10 @@ Modify the line `port=1935` so that it use another not-in-use port, Ex: `port=99
 - run the second Monaserver like running the first one: `./MonaServer` for Mac & Linux and `.\MonaServer.exe` for Windows
 - remain the terminal
 ### Streaming GoPro to MonaServer
-get the local ip address of your pc 
-    - [Windows method](https://www.howtogeek.com/858334/how-to-find-your-ip-address-from-cmd-command-prompt/)
-    - [Linux method](https://phoenixnap.com/kb/how-to-find-ip-address-linux)
-    - [MacOS Method](https://www.wikihow.com/Find-Your-IP-Address-on-a-Mac)
+get the local ip address of your pc  
+- [Windows method](https://www.howtogeek.com/858334/how-to-find-your-ip-address-from-cmd-command-prompt/)
+- [Linux method](https://phoenixnap.com/kb/how-to-find-ip-address-linux)
+- [MacOS Method](https://www.wikihow.com/Find-Your-IP-Address-on-a-Mac)
 #### Streaming one GoPro to the first Monaserver
 - open GoPro Quik & connect to GoPro
 - Control Your Gopro -> Set Up Live -> Other/RTMP 
