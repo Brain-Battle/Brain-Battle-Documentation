@@ -68,5 +68,5 @@ get the local ip address of your pc
 - chose other streaming options accordingly and stream
 #### Streaming the second GoPro to the second Monaserver
 - repeat all steps as streaming the first Gopro until "ENTER YOUR RTMP URL"
-- At "ENTER YOUR RTMP URL" section, enter `rtmp://[local ip address]:[the port number you've set in Monaserver.ini with the second Monaserver]` ex:`rtmp://192.168.178.10:9999`
-- chose orhter streaming options accordingly and stream
+- At "ENTER YOUR RTMP URL" section, enter `rtmp://[local ip address]:[the not-in-use-port number you've just chosed]` ex:`rtmp://192.168.178.10:9999` (Please refer to the 2nd step of setting the second monaserver)
+- chose other streaming options accordingly and stream
