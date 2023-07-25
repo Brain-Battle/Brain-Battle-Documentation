@@ -5,7 +5,7 @@
 **Goal**:  
 to display streaming from two gopro on a screen  
 **Method**:  
-Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPro to each server using **GoPro Quik** app and then receive the streamings using **FFmpeg**.
+Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPro to each server using **GoPro Quik** app and then receive the streaming using **FFmpeg**.
 ### Requirements
 - [MonaServer2](https://github.com/MonaSolutions/MonaServer2) for hosting RTMP server
 - [FFmpeg](https://ffmpeg.org/) to receive GoPro streaming with low delay
@@ -65,4 +65,8 @@ get the local ip address of your pc
 - Control Your Gopro -> Set Up Live -> Other/RTMP 
 - Connect GoPro to the same wifi your pc connected
 - At "ENTER YOUR RTMP URL" section, enter `rtmp://[local ip address]` replace [local ip address] with the local ip address just obtained
-- chose other option accordingly and stream
+- chose other streaming options accordingly and stream
+#### Streaming the second GoPro to the second Monaserver
+- repeat all steps as streaming the first Gopro until "ENTER YOUR RTMP URL"
+- At "ENTER YOUR RTMP URL" section, enter `rtmp://[local ip address]:[the port number you've set in Monaserver.ini with the second Monaserver]` ex:`rtmp://192.168.178.10:9999`
+- chose orhter streaming options accordingly and stream
