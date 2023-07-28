@@ -1,6 +1,8 @@
 # Brain Battle
 
 ## GoPro Streaming
+### Introduction
+This repo doesn't contains any code, only instructions and scripts. It is a solution on how to use different tools to achieve certain goals.
 ### Method & Goal
 **Goal**:  
 to display streaming from two gopro on a screen  
@@ -10,9 +12,9 @@ Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPr
 - [MonaServer2](https://github.com/MonaSolutions/MonaServer2) for hosting RTMP server
 - [FFmpeg](https://ffmpeg.org/) to receive GoPro streaming with low delay
 - Two iOS or Android Device with GoPro [Quik](https://gopro.com/de/de/shop/quik-app-video-photo-editor) installed
-- PC with wireless network interface (Wifi)
+- PC with wireless network interface (Wifi function)
 - Wireless local area network (WLAN, usually a wifi router)
-### Setup Two MonaServer
+### Setup Two MonaServers
 #### First MonaServer
 - Install requirements based on instruction of [MonaServer2](https://github.com/MonaSolutions/MonaServer2) Github Page (MonaServer itself dosn't requires installation)
 - For Linux & MacOS, compile MonaServer according to [instruction](https://github.com/MonaSolutions/MonaServer2)
@@ -31,7 +33,8 @@ Protocols.h[82] HTTPS server started on 0.0.0.0:443
 Protocols.h[82] WSS server started on 0.0.0.0:443
 Protocols.h[82] SRT server started on 0.0.0.0:9710
 ```
-Now the Monaserver is running locally, and the RTMP server is hosted on the default RTMP port `port 1935` as the fourth line shows  
+Now the Monaserver is running locally, and the line `Protocols.h[82] RTMP server started on 0.0.0.0:1935` shows that 
+the RTMP server is running at the default RTMP port 1935
 - **Remain the terminal** so that the server keep running  
 #### The Second Instance of MonaServer
 - Copy the entire MonaServer folder (rename the copy if under same path)
@@ -72,8 +75,11 @@ Get the local ip address of your pc
 - At "ENTER YOUR RTMP URL" section, enter `rtmp://[local ip address]:[the not-in-use-port number you've just chosed]` ex:`rtmp://192.168.178.10:9999` (Please refer to the 2nd step of setting the second instance of  monaserver)
 - Chose other streaming options accordingly and stream
 ### Receive Streaming
+#### Receive streaming with FFplay from FFmpeg
 - Install [FFmpeg](https://ffmpeg.org/) on your device
-- Run `ffplay -an -flags low_delay -fflags nobuffer -framedrop -strict experimental -probesize 32 -analyzeduration 0 -sync ext rtmp://[ip:port-number]` to receive streaming of the first GoPro.
+- Run `ffplay -an -flags low_delay -fflags nobuffer -framedrop -strict experimental -probesize 32 -analyzeduration 0 -sync ext rtmp://[ip:port-number]` to receive streaming of the first GoPro.  
+Modify `[ip:port-number]` accordingly ex:`192.168.178.10:9999`.  
+Please feel free to modify the flags to minimize the delay. See [FFplay](http://ffmpeg.org/ffplay.html) documentation 
 - Alternatively, modify the ip and port in the scripts and run `./receive_streaming_unix.sh` for MacOS & Linux, `.\receive_streaming_pwrshell.ps1` for Powershell on Windows
 - For receiving the streaming of the first GoPro, the port-number is optional
 - For receiving the streaming of the second GoPro, change the port number accordingly (please refers to the step "Modify the port for the second Monaserver")  
