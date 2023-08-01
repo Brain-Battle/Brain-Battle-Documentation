@@ -80,7 +80,10 @@ Get the local ip address of your pc
 ### Receive Streaming
 #### Receive streaming with FFplay from FFmpeg
 - Install [FFmpeg](https://ffmpeg.org/) on your device
-- Run `ffplay -an -flags low_delay -fflags nobuffer -framedrop -strict experimental -probesize 32 -analyzeduration 0 -sync ext rtmp://[ip:port-number]` 
+- Run
+  ```
+  ffplay -an -flags low_delay -fflags nobuffer -framedrop -strict experimental -probesize 32 -analyzeduration 0 -sync ext rtmp://[ip:port-number]
+  ```
 to receive streaming of the first GoPro. Modify the `[ip:port-number]` part accordingly, the `ip` should be replaced with your local ip
     - For receiving the streaming of the first GoPro, the port-number is optional, example:`... -sync ext rtmp://192.168.178.10`
     - For receiving the streaming of the second GoPro, change the port number accordingly (please refers to the step "Modify the port for the second Monaserver"), example:`... -sync ext rtmp://192.168.178.10:9999`  
