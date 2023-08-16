@@ -25,4 +25,4 @@
 # 	provided by windows, or just download a fontfile and specify the path to it.
 # 	When providing the path, please use '\\' to escape the ':' in the path as the example shows.
 #
- ffmpeg -i .\round1-edit-pr.mp4 -vf "drawtext=fontfile=C\\:/Users/media/Documents/Brain-Battle/Fontfile/Open_Sans/static/OpenSans-Regular.ttf : text='%{pts\:hms}  %{n}': x=(w-tw)/2: y=h-(2*lh): fontsize=72: fontcolor=white: box=1: boxcolor=0x00000099" -y -b:v 10000kb .\round1-edit-pr-framenumber-timecode.mp4
+ ffmpeg -i .\round1-edit-pr.mp4 -vf "drawtext=fontfile=C\\:/Users/media/Documents/Brain-Battle/Fontfile/Open_Sans/static/OpenSans-Regular.ttf : text='%{pts\:hms}  %{n}': x=(w-tw)/2: y=h-(2*lh): fontsize=72: fontcolor=white: box=1: boxcolor=0x00000099" -y -b:v 10000k .\round1-edit-pr-framenumber-timecode.mp4
