@@ -9,12 +9,14 @@ Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPr
 - [FFmpeg](https://ffmpeg.org/) to receive GoPro streaming with low delay
 - Two iOS or Android Device with GoPro [Quik](https://gopro.com/de/de/shop/quik-app-video-photo-editor) installed
 - PC with wireless network interface (Wifi function)
-- Wireless local area network (WLAN, usually a wifi router)
+- Wireless local area network (WLAN, usually a wifi router; **eduroam is not suitable!**)
 ## Prepare Two MonaServers
 ### Setup
+#### Linux & MacOS
 - Install requirements based on instruction of [MonaServer2](https://github.com/MonaSolutions/MonaServer2) Github Page (MonaServer itself dosn't requires installation)
-- For Linux & MacOS, compile MonaServer according to [unix-setup instruction](https://github.com/MonaSolutions/MonaServer2#unix-setup)
-- For Windows, [download](https://github.com/MonaSolutions/MonaServer2#binaries) the binary version
+- Compile MonaServer according to [unix-setup instruction](https://github.com/MonaSolutions/MonaServer2#unix-setup)
+#### Windows
+- [Download](https://github.com/MonaSolutions/MonaServer2#binaries) the binary version
 ### The First Instance of MonaServer
 - Run `./MonaServer` at root folder of MonaServer; for windows, use powershell and run `.\MonaServer.exe`
 The output should looks like this if the server is successfully running:
@@ -30,10 +32,10 @@ Protocols.h[82] HTTPS server started on 0.0.0.0:443
 Protocols.h[82] WSS server started on 0.0.0.0:443
 Protocols.h[82] SRT server started on 0.0.0.0:9710
 ```
-Now the Monaserver is running locally, and this line from above output
+Now the Monaserver is running locally, and the line:
 > ```Protocols.h[82] RTMP server started on 0.0.0.0:1935```
 
-shows that the RTMP server is running at the default RTMP port 1935
+from above output shows that the RTMP server is running at the default RTMP port 1935
 - Remain the terminal so that the server keep running  
 ### The Second Instance of MonaServer <a id="2ndMonaserver"></a>
 - Copy the entire MonaServer folder (rename the copy to avoid conflict is needed)
@@ -61,7 +63,7 @@ Modify the line `port=1935` so that it use another not-in-use port, example: `po
 - Run the second Monaserver like running the first one: `./MonaServer` for Mac & Linux and `.\MonaServer.exe` for Windows
 - Remain the terminal
 ## Streaming GoPro to MonaServer
-Get the local ip address of your pc  
+### Get the ip address in the WLAN of your pc  
 - [Windows method](https://www.howtogeek.com/858334/how-to-find-your-ip-address-from-cmd-command-prompt/)
 - [Linux method](https://phoenixnap.com/kb/how-to-find-ip-address-linux)
 - [MacOS Method](https://www.wikihow.com/Find-Your-IP-Address-on-a-Mac)  
@@ -71,7 +73,7 @@ Get the local ip address of your pc
 - Connect GoPro to the same wifi your pc connected
 - At "ENTER YOUR RTMP URL" section, enter 
 ```
-rtmp://[local ip address]
+rtmp://[ip address]
 ``` 
 replace [local ip address] with the local ip address you just obtained  
 for example: 
@@ -84,7 +86,7 @@ rtmp://192.168.178.10
 - Repeat all steps until "ENTER YOUR RTMP URL"
 - At "ENTER YOUR RTMP URL" section, enter 
 ```
-rtmp://[local ip address]:[the not-in-use-port number you've just chosed]
+rtmp://[ip address]:[the port number where 2nd Monaserver runs]
 ``` 
 example:
 ```
