@@ -98,8 +98,8 @@ rtmp://192.168.178.10:9999
 ### Receive streaming with FFplay from FFmpeg
 - Install [FFmpeg](https://ffmpeg.org/) on your device
 - Modify and run
-  ```
-  ffplay -an -flags low_delay -fflags nobuffer -framedrop -strict experimental -probesize 32 -analyzeduration 0 -sync ext rtmp://[ip:port-number]
+```
+ffplay -an -flags low_delay -fflags nobuffer -framedrop -strict experimental -probesize 32 -analyzeduration 0 -sync ext rtmp://[ip:port-number]
   ```
 to receive streaming of the first GoPro. Modify the `[ip:port-number]` part accordingly, the `ip` should be replaced with your local ip  
 - To receive the streaming of the **1st** GoPro, the port-number is optional, example:
