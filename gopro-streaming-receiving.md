@@ -32,7 +32,7 @@ Protocols.h[82] HTTPS server started on 0.0.0.0:443
 Protocols.h[82] WSS server started on 0.0.0.0:443
 Protocols.h[82] SRT server started on 0.0.0.0:9710
 ```
-Now the Monaserver is running locally, and the line:
+Now the Monaserver is running locally, and the fourth line:
 > ```Protocols.h[82] RTMP server started on 0.0.0.0:1935```
 
 from above output shows that the RTMP server is running at the default RTMP port 1935
