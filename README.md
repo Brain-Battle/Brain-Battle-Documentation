@@ -7,7 +7,7 @@ This repo doesn't contains any code, only instructions and scripts. It is a docu
 
 ## Contents
 
-### 1. Multiple Gopro streaming and receiving the live-streamings
+### 1. Multiple Gopro streaming and live-streamings receiving
 #### [Documentation](./gopro-streaming-receiving.md)
 - host local rtmp servers 
 - stream gopro to rtmp servers
