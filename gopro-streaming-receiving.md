@@ -3,7 +3,7 @@
 **Goal**:  
 to display streaming from two gopro on a screen (one device)  
 **Method**:  
-Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPro to each server using **GoPro Quik** app and then receive the streaming using **FFmpeg**.
+Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPros to each server using **GoPro Quik** app and then receive the streaming using **FFmpeg**.
 ## Requirements
 - [MonaServer2](https://github.com/MonaSolutions/MonaServer2) for hosting RTMP server
 - [FFmpeg](https://ffmpeg.org/) to receive GoPro streaming with low delay
@@ -94,7 +94,7 @@ rtmp://192.168.178.10:9999
 ``` 
 (Please refer to the [2nd step](#2ndMonaserver) of setting the second instance of monaserver)
 - Chose other streaming options accordingly and stream
-## Receive Streaming
+## Receive Streamings
 ### Receive streaming with FFplay from FFmpeg
 - Install [FFmpeg](https://ffmpeg.org/) on your device
 - Modify and run
@@ -114,4 +114,4 @@ to receive streaming of the first GoPro. Modify the `[ip:port-number]` part acco
 - Alternatively, modify (ip, portnumber, flags) & use the script provided in this repo. 
 ### Scripts
 - [receive_streaming_unix.sh](./gopro-streaming-receiving/receive_streaming_unix.sh) for MacOS & Linux  
-- [receive_streaming_pwrshell.sh](./gopro-streaming-receiving/receive_streaming_pwrshell.ps1) for Powershell on Windows
+- [receive_streaming_pwrshell.ps1](./gopro-streaming-receiving/receive_streaming_pwrshell.ps1) for Powershell on Windows
