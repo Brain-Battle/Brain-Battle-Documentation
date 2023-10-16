@@ -11,7 +11,7 @@ This repo doesn't contains any code, only instructions and scripts. It is a docu
 #### [Documentation](./gopro-streaming-receiving.md)
 - host local rtmp servers 
 - stream gopro to rtmp servers
-- receive streamings using ffmpeg (ffplay)  
+- receive streams using ffmpeg (ffplay)  
 
 ### 2. Video processing
 #### [Documentation](./video-processing.md)
@@ -19,6 +19,6 @@ This repo doesn't contains any code, only instructions and scripts. It is a docu
 - change bit rate and fps using ffmpeg (not recommended)
 
 ### 3. EEG data streaming and live plotting
-#### [Documentation](./eeg-streaming&display.md)
+#### [Documentation](./eeg-streaming&display.md) (work in progress)
 - search & connect museband
-- stream & display plot of live EEG data
+- stream & live plot EEG data stream

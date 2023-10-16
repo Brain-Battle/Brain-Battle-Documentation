@@ -1,15 +1,16 @@
-## GoPro Streaming
-### Method & Goal
+# GoPro Streaming & Stream Receiving
+## Method & Goal
 **Goal**:  
-to display streaming from two gopro on a screen (one device)  
+to display stream from two gopros on a screen (one device)  
 **Method**:  
-Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPros to each server using **GoPro Quik** app and then receive the streaming using **FFmpeg**.
+Host two RTMP servers locally using two instance of **MonaServer2**, stream GoPros to each server using **GoPro Quik** app and then receive the stream using **FFmpeg**.
 ## Requirements
 - [MonaServer2](https://github.com/MonaSolutions/MonaServer2) for hosting RTMP server
-- [FFmpeg](https://ffmpeg.org/) to receive GoPro streaming with low delay
+- [FFmpeg](https://ffmpeg.org/) to receive GoPro stream with low delay
 - Two iOS or Android Device with GoPro [Quik](https://gopro.com/de/de/shop/quik-app-video-photo-editor) installed
 - PC with wireless network interface (Wifi function)
 - Wireless local area network (WLAN, usually a wifi router; **eduroam is not suitable!**)
+
 ## Prepare Two MonaServers
 ### Setup
 #### Linux & MacOS
@@ -94,19 +95,21 @@ rtmp://192.168.178.10:9999
 ``` 
 (Please refer to the [2nd step](#2ndMonaserver) of setting the second instance of monaserver)
 - Chose other streaming options accordingly and stream
-## Receive Streamings
-### Receive streaming with FFplay from FFmpeg
+## Receive Streams
+### Receive stream with FFplay from FFmpeg
 - Install [FFmpeg](https://ffmpeg.org/) on your device
+	- MacOS & Linux: install with respective package manager (homebrew is recommended for MacOS)
+	- Windows: install with winget to avoid annoying `$PATH` setup
 - Modify and run
 ```
 ffplay -an -flags low_delay -fflags nobuffer -framedrop -strict experimental -probesize 32 -analyzeduration 0 -sync ext rtmp://[ip:port-number]
   ```
-to receive streaming of the first GoPro. Modify the `[ip:port-number]` part accordingly, the `ip` should be replaced with your local ip  
-- To receive the streaming of the **1st** GoPro, the port-number is optional, example:
+to receive stream of the first GoPro. Modify the `[ip:port-number]` part accordingly, the `ip` should be replaced with your local ip. The flags are used to lower the delay.
+- To receive the stream of the **1st** GoPro, the port-number is optional, example:
 ```
 ... -sync ext rtmp://192.168.178.10
 ```
-- To receive the streaming of the **2nd** GoPro, change the port number accordingly (please refers to the step "Modify the port for the second Monaserver"), example:
+- To receive the stream of the **2nd** GoPro, change the port number accordingly (please refers to the step "Modify the port for the second Monaserver"), example:
 ```
 ... -sync ext rtmp://192.168.178.10:9999
 ```
@@ -115,3 +118,5 @@ to receive streaming of the first GoPro. Modify the `[ip:port-number]` part acco
 ### Scripts
 - [receive_streaming_unix.sh](./gopro-streaming-receiving/receive_streaming_unix.sh) for MacOS & Linux  
 - [receive_streaming_pwrshell.ps1](./gopro-streaming-receiving/receive_streaming_pwrshell.ps1) for Powershell on Windows
+### Receive stream with VLC (with higher delay)
+(work in progress)
