@@ -8,13 +8,13 @@ This repo doesn't contains any code, only instructions and scripts. It is a docu
 ## Contents
 
 ### 1. Multiple Gopro streaming and live-streamings receiving
-#### [Documentation](./gopro-streaming-receiving.md)
+#### [Documentation](./gopro-streaming-receiving.md) (work in progress)
 - host local rtmp servers 
 - stream gopro to rtmp servers
 - receive streams using ffmpeg (ffplay)  
 
 ### 2. Video processing
-#### [Documentation](./video-processing.md)
+#### [Documentation](./video-processing.md) (work in progress)
 - add timecode and frame number into a video using ffmpeg
 - change bit rate and fps using ffmpeg (not recommended)
 
