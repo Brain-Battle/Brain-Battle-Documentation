@@ -16,6 +16,13 @@ parameters are seperated by `:`
 example: `-b:v` set video stream bit rate  
 example: `-b:v 10000k` set video stream bit rate to 10000k per second
 
+#### Template:
+```
+ffmpeg -i [input file path] -vf "text='%{pts\:hms}  %{n}': 
+ x=(w-tw)/2: y=h-(2*lh): fontsize=72: fontcolor=white: box=1: 
+boxcolor=0x00000099" -y -b:v [bitrate]k [output filename]
+```
+
 #### Notice:
 - **Line Breaking**  
 Some example command use unix way to break line using ` \ ` (back slash). However, in powershell, please change it into powershell style, which is `` ` `` (back tick), or simply do not use multiple line command.
@@ -25,12 +32,6 @@ Check bit rate of the video being processed first, then set the same or similar 
 In windows, FFmpeg can have difficulty on automatically finding font file to use for adding text in video. Therefore, we need to specify the `fontfile` parameter in the `-vf` option. See the first example below.
 	- **Format of Path**  
 Use `C\\:` to represent the C volume 
-#### Template:
-```
-ffmpeg -i [input file path] -vf "text='%{pts\:hms}  %{n}': 
- x=(w-tw)/2: y=h-(2*lh): fontsize=72: fontcolor=white: box=1: 
-boxcolor=0x00000099" -y -b:v [bitrate]k [output filename]
-```
 #### Example:
 - an example for windows with specified fontfile path.
 ```
