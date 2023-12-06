@@ -23,6 +23,7 @@ This repo doesn't contains any code, only instructions and scripts. It is a docu
 - brief intro to muselsl
 - how to install muselsl
 - how to use muselsl to record eeg data (two methods)
+- aditional guide to python virtual environment
 
 ### 4. EEG data streaming and live plotting
 #### [Documentation](./markdowns/eeg-streaming&display.md) (work in progress)
