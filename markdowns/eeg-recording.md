@@ -44,7 +44,16 @@ Finds and lists all non-busy muse devices to get their **device name** and **MAC
 muselsl list
 ```
 
-Note that muse devices cannot have multiple streams, and wont be listed if busy. Similarly, while your terminal is streaming with a muse device, that terminal will be busy and you'll have to open a second terminal to continue entering commands. If using a Python Virtual Environment, make sure it is still Active throughout your use of muselsl.
+Sample output:
+```
+[under construction]
+```
+
+Note that muse devices cannot have multiple streams, and wont be listed if busy. 
+Similarly, while your terminal is streaming with a muse device, 
+that terminal will be busy and you'll have to open a second terminal to 
+continue entering commands. If using a Python Virtual Environment, 
+make sure it is activeted on all terminals where you use muselsl.
 
 
 #### Option 1: record using `record_direct`
