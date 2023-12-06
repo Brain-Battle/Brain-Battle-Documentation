@@ -100,11 +100,16 @@ Virtual environment need to be activated to use.
 ### Activate existing python virtual environment
 
 To activate a venv, in terminal, navigate to the venv folder, then run the appropriate command:
-- windows (powershell) : `./Scripts/Activate.ps1`
-- unix-like system: `source ./bin/[respective-shell-script]`
-    - for bash & bash compatible shell (most cases): `source ./bin/activate`
-    - for fish `source ./bin/activate.fish`
-    - for csh `source ./bin/activate.csh`
+- windows (powershell) :  
+```./Scripts/Activate.ps1```
+- unix-like system:  
+```source ./bin/[respective-shell-script]```
+    - for bash & bash compatible shell (most cases):  
+      ```source ./bin/activate```
+    - for fish   
+      ```source ./bin/activate.fish```
+    - for csh  
+      ```source ./bin/activate.csh```
 
 ### Check if a python virtual environment is active
 The command prompt will usually show the name of an active virtual environment.
