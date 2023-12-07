@@ -75,7 +75,7 @@ muselsl stream -n [device-name]
 - **`-n`** to optionally specify a device's name (from `muselsl list`)
 - will stream the first available muse if `-n` was not specified
 
-Then, record from the specified muse-band:
+Then, record from the stream of specified muse-band:
 ```
 muselsl record -n [device-name] -d [duration(sec)]
 ```
