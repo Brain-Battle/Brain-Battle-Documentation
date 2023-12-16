@@ -1,4 +1,4 @@
-# Recording EEG Data with Muselsl
+# Using Muselsl to recording EEG Data
 
 ## Contents
 - **Intro**
@@ -49,11 +49,11 @@ Sample output:
 [under construction]
 ```
 
-Note that muse devices cannot have multiple streams, and wont be listed if busy. 
+Note that muse devices cannot have multiple streams, and won't be listed if busy. 
 Similarly, while your terminal is streaming with a muse device, 
 that terminal will be busy and you'll have to open a second terminal to 
 continue entering commands. If using a Python Virtual Environment, 
-make sure it is activeted on all terminals where you use muselsl.
+make sure it is activated on all terminals where you use muselsl.
 
 
 #### Option 1: record using `record_direct`
@@ -85,9 +85,9 @@ muselsl record -n [device-name] -d [duration(sec)]
 - Recording will be stored in the current folder
 
 ### Tips:
-- With our current setup, the physical muse device gets buried under the boxers' headgear, making it hard to access during sessions. Make sure the stream/recording is good to go before the boxers put their equipment on. Also make sure the muse is not idle for more than a few minutes; it will turn off automatically. Streaming will keep them active, especially useful duing setup!
-- Muselsl currently uses bluetooth. Make sure the devices are not too far from each other (because you will see a lot of data packets go missing). Keeping the computer withing 6 meters distance has worked without problems so far. The distance has not been limit-tested.
-- Make sure you are familiar with the names of the muse devices, and keep track of which person is using which device. Currently the physical devices are labeled with their names/numbers, which usually take the form MuseS-XXXX (numbers), however can be modified. Make sure that your recordings are well organized or labeled in some way; since the recording commands dumps the recordings in the current folder/directory, its recommended to run the command in a specific folder with the date and name already written.
+- With our current setup, the physical muse device gets buried under the boxers' headgear, making it hard to access during sessions. Make sure the stream/recording is good to go before the boxers put their equipment on. Also make sure the muse is not idle for more than a few minutes; it will turn off automatically. Streaming will keep them active, especially useful during setup!
+- Muselsl currently uses bluetooth. Make sure the devices are not too far from each other (because you will see a lot of data packets go missing). Keeping the computer within 6 meters distance has worked without problems so far. The distance has not been limit-tested.
+- Make sure you are familiar with the names of the muse devices, and keep track of which person is using which device. Currently the physical devices are labeled with their names/numbers, which usually take the form MuseS-XXXX (numbers), however can be modified. Make sure that your recordings are well organized or labeled in some way; since the recording commands dumps the recordings in the current folder/directory, it is recommended to run the command in a specific folder with the date and name already written.
 
 ## Additional Guides
 
@@ -104,7 +104,7 @@ The command will create a folder named `env-name` which contains
 files of the virtual environment. The structure of the folder varies 
 between different OSs.
 
-Virtual environment need to be activated to use.
+Virtual environments need to be activated to use.
 
 ### Activate existing python virtual environment
 
